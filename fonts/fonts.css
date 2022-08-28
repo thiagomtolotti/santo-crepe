@@ -6,7 +6,7 @@
          url('elephnt-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 
 
@@ -16,7 +16,7 @@
          url('palai-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-
+    font-display: swap;
 }
 
 
@@ -26,7 +26,7 @@
          url('pala-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 
 
@@ -36,7 +36,7 @@
          url('echelon_rg-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 
 @font-face {
@@ -45,5 +45,5 @@
          url('d-din-condensed-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-
+    font-display: swap;
 }
