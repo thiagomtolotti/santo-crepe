@@ -146,3 +146,7 @@ function whatsappWeb(){
 	}
 }
 whatsappWeb()
+
+document.querySelectorAll('img').forEach((image)=>{
+	image.setAttribute("style","width:auto; height: auto")
+})
