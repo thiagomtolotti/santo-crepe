@@ -2,18 +2,21 @@ const cardapios = `[
     {
          "name":"Quartier de Paris",
          "salgados": [{
-              "name" :"Queijo",
-              "ingredients" : "Queijo Mussarela"
+              "name" :"Frango",
+              "ingredients" : "Queijo muçarela, frango desfiado e requeijão cremoso"
          }, {
-              "name" :"Marguerita",
-              "ingredients" : "Queijo Mussarela, tomates frescos e manjericão fresco"
-         }, {
-              "name" :"Presunto e Queijo",
-              "ingredients" : "Queijo Mussarela e presunto"
+              "name" :"Pizza",
+              "ingredients" : "Queijo muçarela, tomates frescos, orégano e presunto"
          }, {
               "name" :"Calabresa",
-              "ingredients" : "Queijo Mussarela e calabresa fatiada em cubos"
-         }],
+              "ingredients" : "Queijo muçarela e calabresa em cubinhos"
+         }, {
+              "name" :"Marguerita",
+              "ingredients" : "Queijo muçarela, tomates frescos e manjericão"
+         }, {
+               "name" :"Light",
+               "ingredients" : "Queijo muçarela, tomates frescos e rúcula"
+          }],
          "doces": [{
               "name": "Chocolate",
               "ingredients": "Chocolate ao leite"
@@ -30,19 +33,19 @@ const cardapios = `[
          "name":"Santo",
          "salgados": [{
               "name" :"Frango Cremoso",
-              "ingredients" : "Queijo Mussarela, frango cremoso com milho e batata palha"
+              "ingredients" : "Queijo muçarela, frango cremoso e batata palha"
          }, {
               "name" :"Calabresa",
-              "ingredients" : "Queijo Mussarela e calabresa fatiada em cubos"
+              "ingredients" : "Queijo muçarela e calabresa em cubinhos"
          }, {
               "name" :"Curitibano",
-              "ingredients" : "Queijo Mussarela, milho, ervilha e presunto"
+              "ingredients" : "Queijo muçarela, milho, ervilha e presunto"
          },{
               "name" :"Marguerita",
-              "ingredients" : "Queijo Mussarela, tomates frescos e manjericão fresco"
+              "ingredients" : "Queijo muçarela, tomates frescos e manjericão"
          },{
               "name" :"Light",
-              "ingredients" : "Queijo Mussarela, tomates frescos e rúcula"
+              "ingredients" : "Queijo muçarela, tomates frescos e rúcula"
          }],
          "doces": [{
               "name": "Sensação",
@@ -59,19 +62,19 @@ const cardapios = `[
          "name":"Santidade",
          "salgados": [{
               "name" :"Frango Cremoso",
-              "ingredients" : "Queijo Mussarela, frango cremoso com milho e batata palha"
+              "ingredients" : "Queijo muçarela, frango cremoso e batata palha"
          }, {
               "name" :"Bolonhesa",
-              "ingredients" : "Queijo Mussarela, molho bolonhesa e cheddar cremoso"
+              "ingredients" : "Queijo muçarela e molho bolonhesa"
          }, {
               "name" :"Pizza",
-              "ingredients" : "Queijo Mussarela, tomates frescos, orégano e presunto"
+              "ingredients" : "Queijo muçarela, tomates frescos, orégano e presunto"
          }, {
-              "name" :"Champignon",
-              "ingredients" : "Queijo Mussarela e champignon em rodelas"
+              "name" :"Light",
+              "ingredients" : "Queijo muçarela, tomates frescos e rúcula"
          },{
-              "name" :"Curitiboca",
-              "ingredients" : "Queijo Mussarela, milho, ovo cozido, cebola crispy e presunto"
+              "name" :"Português",
+              "ingredients" : "Queijo muçarela, milho, ovo cozido, cebola e presunto"
          }],
          "doces": [{
               "name": "Sensação",
@@ -87,20 +90,20 @@ const cardapios = `[
     }, {
          "name":"Santíssimo",
          "salgados": [{
-              "name" :"Curitibano",
-              "ingredients" : "Queijo Mussarela, carne desfiada, cheddar cremoso e cebolas caramelizadas"
+              "name" :"Carne Desfiada",
+              "ingredients" : "Queijo muçarela, carne desfiada, cheddar cremoso e cebolas caramelizadas"
          }, {
               "name" :"Poulet",
-              "ingredients" : "Queijo Mussarela, frango desfiado e requeijão cremoso"
+              "ingredients" : "Queijo muçarela, frango desfiado e requeijão cremoso"
          }, {
               "name" :"Marguerita",
-              "ingredients" : "Queijo Mussarela, tomates frescos e manjericão fresco"
+              "ingredients" : "Queijo muçarela, tomates frescos e manjericão"
          }, {
               "name" :"Milho e Bacon",
-              "ingredients" : "Queijo Mussarela, bacon em cubos e milho"
+              "ingredients" : "Queijo muçarela, bacon em cubos e milho"
          },{
-              "name" :"3 Queijos",
-              "ingredients" : "Queijo Mussarela, parmesão e gorgonzola"
+              "name" :"Champignon",
+              "ingredients" : "Queijo muçarela, champignon e cebola caramelizada"
          }],
          "doces": [{
               "name": "Sensação",
@@ -117,19 +120,19 @@ const cardapios = `[
          "name":"Divindade",
          "salgados": [{
               "name" :"Croupe",
-              "ingredients" : "Queijo Mussarela, alcatra em tiras, cheddar cremoso e cebolas caramelizadas"
+              "ingredients" : "Queijo muçarela, alcatra em tiras, cheddar cremoso e cebolas caramelizadas"
          }, {
               "name" :"Poulet",
-              "ingredients" : "Queijo Mussarela, frango desfiado e requeijão cremoso"
+              "ingredients" : "Queijo muçarela, frango desfiado e requeijão cremoso"
          }, {
               "name" :"Camarão",
-              "ingredients" : "Queijo Mussarela, camarão com ervas e requeijão cremoso"
+              "ingredients" : "Queijo muçarela, camarão e requeijão cremoso"
          }, {
               "name" :"Light",
-              "ingredients" : "Queijo Mussarela, rúcula e tomate seco"
+              "ingredients" : "Queijo muçarela, rúcula e tomate seco"
          },{
-              "name" :"4 Queijos",
-              "ingredients" : "Queijo Mussarela, parmesão, gorgonzola e provolone"
+              "name" :"3 Queijos",
+              "ingredients" : "Queijo muçarela, parmesão e gorgonzola"
          }],
          "doces": [{
               "name": "Nutella e Morango",
@@ -150,26 +153,26 @@ const cardapios = `[
               "ingredients" : "Queijo Mussarela, rosbife, cogumelos salteados e molho pesto"
          }, {
               "name" :"Champs de Mars",
-              "ingredients" : "Queijo Mussarela, queijo brie e parmesão com geleia de damascos"
+              "ingredients" : "Queijo muçarela, queijo brie e parmesão com geleia de damascos"
          }, {
               "name" :"Marseille",
-              "ingredients" : "Queijo Mussarela, camarão com ervas, cream cheese e molho pesto"
+              "ingredients" : "Queijo muçarela, camarão e cream cheese"
          }, {
               "name" :"Pont Nèuf",
-              "ingredients" : "Queijo Mussarela, frango ao curry e cream cheese"
+              "ingredients" : "Queijo muçarela, frango e cream cheese"
          }, {
-              "name" :"Provence",
-              "ingredients" : "Queijo Mussarela, tomates frescos, manjericão fresco e queijo parmesão"
+              "name" :"Lyon",
+              "ingredients" : "Queijo muçarela, tomates, manjericão fresco e parmesão"
          }],
          "doces": [{
-              "name": "Sacre Coeur",
+              "name": "Nutella",
               "ingredients": "Nutella com calda de frutas vermelhas"
          }, {
-              "name": "Montpellier",
-              "ingredients": "Doce de leite, banana, farofa de biscoitos e caramelo artesanal"
+              "name": "Banoffee",
+              "ingredients": "Rodelas de banana, doce de leite, caramelo artesanal e farofa de biscoitos"
          }, {
               "name": "Crepe Suzette",
-              "ingredients": "Calda de laranja flambada e zester de laranja"
+              "ingredients": "Calda de laranja flambada"
          }],
          "link":"https://api.whatsapp.com/send?phone=554188596006&text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20o%20card%C3%A1pio%20Canonique.",
          "obs": "Salada incluída"
