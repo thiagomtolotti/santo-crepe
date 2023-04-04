@@ -383,11 +383,22 @@ footer a:visited{
         
         padding: 15vh 10vw ;
     }
-    #hero .container, #footer .container{
+    #hero .container{
+        margin: 0 auto;
+    }
+    #hero .image{
+        margin-left: 0;
+    }
+    #footer .container{
         margin: 0 auto 0 0;
     }
 
     /* Social Validation */
+    #social-val{
+        max-width: 1366px;
+        margin: 0 auto;
+        padding: 0;
+    }
     #social-val .image{
         max-width: 500px;
         width: 100%;
