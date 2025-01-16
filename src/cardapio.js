@@ -3,29 +3,29 @@ const cardapios = `[
          "name":"Quartier de Paris",
          "salgados": [{
               "name" :"Frango",
-              "ingredients" : "Queijo muçarela, frango desfiado e requeijão cremoso"
-         }, {
-              "name" :"Pizza",
-              "ingredients" : "Queijo muçarela, tomates frescos, orégano e presunto"
+              "ingredients" : "Queijo muçarela e frango desfiado"
          }, {
               "name" :"Calabresa",
               "ingredients" : "Queijo muçarela e calabresa em cubinhos"
          }, {
-              "name" :"Marguerita",
-              "ingredients" : "Queijo muçarela, tomates frescos e manjericão"
+              "name" :"Queijo e Presunto",
+              "ingredients" : "Queijo muçarela e presunto"
          }, {
-               "name" :"Light",
+               "name" :"Rúcula com Tomate",
                "ingredients" : "Queijo muçarela, tomates frescos e rúcula"
-          }],
+          }, {
+              "name" :"Pizza",
+              "ingredients" : "Queijo muçarela, tomates frescos, orégano e presunto"
+         }, ],
          "doces": [{
-              "name": "Chocolate",
-              "ingredients": "Chocolate ao leite"
-         }, {
-              "name": "Chocolate com banana",
-              "ingredients": "Chocolate ao leite com banana em rodelas"
+              "name": "Morango e Chocolate",
+              "ingredients": "Chocolate com morangos picados"
          }, {
               "name": "Queijo e Goiabada",
-              "ingredients": "Queijo Mussarela e goiabada"
+              "ingredients": "Queijo e goiabada"
+         }, {
+              "name": "Banana e Doce de leite",
+              "ingredients": "Banana em rodelas e doce de leite cremoso"
          }],
          "link":"https://api.whatsapp.com/send?phone=554188596006&text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20o%20card%C3%A1pio%20Quartier%20de%20Paris.",
          "obs" : "Crepes servidos no cone de papelão"
@@ -33,10 +33,10 @@ const cardapios = `[
          "name":"Santo",
          "salgados": [{
               "name" :"Frango Cremoso",
-              "ingredients" : "Queijo muçarela, frango cremoso e batata palha"
+              "ingredients" : "Queijo muçarela, frango cremoso com milho e batata palha"
          }, {
-              "name" :"Calabresa",
-              "ingredients" : "Queijo muçarela e calabresa em cubinhos"
+              "name" :"Queijo e Presunto",
+              "ingredients" : "Queijo muçarela e cubos de presunto"
          }, {
               "name" :"Curitibano",
               "ingredients" : "Queijo muçarela, milho, ervilha e presunto"
@@ -52,7 +52,7 @@ const cardapios = `[
               "ingredients": "Morango e chocolate ao leite"
          }, {
               "name": "Doce de leite",
-              "ingredients": "Banana em rodelas e doce de leite"
+              "ingredients": "Banana em rodelas e doce de leite cremoso"
          }, {
               "name": "Banana",
               "ingredients": "Banana, canela e leite condensado"
@@ -62,20 +62,20 @@ const cardapios = `[
          "name":"Santidade",
          "salgados": [{
               "name" :"Frango Cremoso",
-              "ingredients" : "Queijo muçarela, frango cremoso e batata palha"
+              "ingredients" : "Queijo muçarela, frango cremoso com milho e batata palha"
          }, {
               "name" :"Bolonhesa",
               "ingredients" : "Queijo muçarela e molho bolonhesa"
+         }, {
+              "name" :"Calabresa",
+              "ingredients" : "Queijo muçarela e calabresa em cubinhos"
          }, {
               "name" :"Pizza",
               "ingredients" : "Queijo muçarela, tomates frescos, orégano e presunto"
          }, {
               "name" :"Light",
               "ingredients" : "Queijo muçarela, tomates frescos e rúcula"
-         },{
-              "name" :"Português",
-              "ingredients" : "Queijo muçarela, milho, ovo cozido, cebola e presunto"
-         }],
+         },],
          "doces": [{
               "name": "Sensação",
               "ingredients": "Morango e chocolate ao leite"
@@ -112,8 +112,8 @@ const cardapios = `[
               "name": "Strogonofe de Nozes",
               "ingredients": "Blend de nozes misturadas ao doce de leite"
          }, {
-              "name": "Blanche",
-              "ingredients": "Morango e chocolate branco"
+              "name": "Doce de Leite",
+              "ingredients": "Rodelas de banana e doce de leite"
          }],
          "link":"https://api.whatsapp.com/send?phone=554188596006&text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20o%20card%C3%A1pio%20Sant%C3%ADssimo."
     }, {
@@ -180,77 +180,106 @@ const cardapios = `[
 ]`;
 
 class Cardapio {
-    constructor(name){
-         let cardapio = JSON.parse(cardapios).find(cardapio => cardapio.name == name)
+  constructor(name) {
+    const cardapio = JSON.parse(cardapios).find(
+      (cardapio) => cardapio.name == name
+    );
 
-         //checa se o cardápio existe
-         if(cardapio){
-              this.name = cardapio.name;
-              this.salgados = [];
-              this.doces = [];
-              this.link = cardapio.link
-              this.obs = cardapio.obs
+    //checa se o cardápio existe
+    if (cardapio) {
+      this.name = cardapio.name;
+      this.salgados = [];
+      this.doces = [];
+      this.link = cardapio.link;
+      this.obs = cardapio.obs;
 
-              //acessa os sabores do cardápio
-              for(let i = 0; i < cardapio.salgados.length; i++){
-                   this.salgados[i] = cardapio.salgados[i];
-              }
+      //acessa os sabores do cardápio
+      for (let i = 0; i < cardapio.salgados.length; i++) {
+        this.salgados[i] = cardapio.salgados[i];
+      }
 
-              for(let i = 0; i < cardapio.doces.length; i++){
-                   this.doces[i] = cardapio.doces[i];
-              }
+      for (let i = 0; i < cardapio.doces.length; i++) {
+        this.doces[i] = cardapio.doces[i];
+      }
 
-              this.render();
-         }else{
-              console.log('sem cardápio')
-              return false
-         }
+      this.render();
+    } else {
+      console.log("sem cardápio");
+      return false;
     }
+  }
 
-    render(){
-          document.documentElement.style.overflowY = "hidden";
+  render() {
+    document.documentElement.style.overflowY = "hidden";
 
-          let cardapio = document.createElement('div');
-          cardapio.setAttribute('id', 'cardapio-overlay');
+    let cardapio = document.createElement("div");
+    cardapio.setAttribute("id", "cardapio-overlay");
 
-          cardapio.insertAdjacentHTML('beforeend', `\
+    cardapio.insertAdjacentHTML(
+      "beforeend",
+      `\
                <button id="close" onclick='closeMenu()'> \
                     <img src="./img/Icones_close_icon.svg" alt="Ícone - fechar">\
-               </button>`); 
+               </button>`
+    );
 
-          cardapio.insertAdjacentHTML('beforeend', ` \
+    cardapio.insertAdjacentHTML(
+      "beforeend",
+      ` \
                <div class="container"> \
                     <h2>${this.name}</h2> \
-                    <p>${(this.obs != "" && this.obs != null && this.obs != undefined) ? this.obs : ""}</p>
-               </div>`);
+                    <p>${
+                      this.obs != "" &&
+                      this.obs != null &&
+                      this.obs != undefined
+                        ? this.obs
+                        : ""
+                    }</p>
+               </div>`
+    );
 
-          for(let i = 0; i < this.salgados.length; i++){
-               cardapio.insertAdjacentHTML('beforeend', ` \
+    for (let i = 0; i < this.salgados.length; i++) {
+      cardapio.insertAdjacentHTML(
+        "beforeend",
+        ` \
                     <div class="sabor"> \
                     <h4>${this.salgados[i].name}</h4> \
                     <hr> \
                     <p>${this.salgados[i].ingredients}</p> \
                     </div>
-               `)
-          }
+               `
+      );
+    }
 
-          cardapio.insertAdjacentHTML('beforeend', `\
+    cardapio.insertAdjacentHTML(
+      "beforeend",
+      `\
           <div class="container"> \
                <h2>Doces</h2>
-               <p>${(this.name != "Quartier de Paris") ? "Todos acompanham calda e sorvete" : ""}</p> \
-          </div>`);
+               <p>${
+                 this.name != "Quartier de Paris"
+                   ? "Todos acompanham calda e sorvete"
+                   : ""
+               }</p> \
+          </div>`
+    );
 
-          for(let i = 0; i < this.doces.length; i++){
-               cardapio.insertAdjacentHTML('beforeend', ` \
+    for (let i = 0; i < this.doces.length; i++) {
+      cardapio.insertAdjacentHTML(
+        "beforeend",
+        ` \
                     <div class="sabor"> \
                     <h4>${this.doces[i].name}</h4> \
                     <hr> \
                     <p>${this.doces[i].ingredients}</p> \
                     </div>
-               `)
-          }
+               `
+      );
+    }
 
-          cardapio.insertAdjacentHTML('beforeend', `\
+    cardapio.insertAdjacentHTML(
+      "beforeend",
+      `\
           <div id="buttons-container"> \
                <button class="voltar" onclick="closeMenu()">Voltar</button> \
                <a href="${this.link}" target="_blank" rel="noopener noreferrer"> \
@@ -259,27 +288,29 @@ class Cardapio {
                          <span><img src="img/whatsapp.svg" alt="Logotipo Whatsapp" style="max-width: 25px;"></span> \
                     </button> \
                </a> \
-          </div>`);
+          </div>`
+    );
 
-          let overlay = document.getElementById('overlay')
+    let overlay = document.getElementById("overlay");
 
-          overlay.innerHTML = "<div class='border'></div>"
-          overlay.querySelector('.border').insertAdjacentElement('beforeend', cardapio)
-          overlay.style.display = "block"
+    overlay.innerHTML = "<div class='border'></div>";
+    overlay
+      .querySelector(".border")
+      .insertAdjacentElement("beforeend", cardapio);
+    overlay.style.display = "block";
 
-          overlay.addEventListener("click", (ev)=>{
-               if(ev.target != overlay) return
-               closeMenu();
-          })
+    overlay.addEventListener("click", (ev) => {
+      if (ev.target != overlay) return;
+      closeMenu();
+    });
 
-          whatsappWeb()
+    whatsappWeb();
 
-          new SmoothScroll(overlay,150,12)
-
-    }
+    new SmoothScroll(overlay, 150, 12);
+  }
 }
 
-function closeMenu(){
-    document.getElementById('overlay').style.display = "none";
-    document.documentElement.style.overflowY = "auto";
+function closeMenu() {
+  document.getElementById("overlay").style.display = "none";
+  document.documentElement.style.overflowY = "auto";
 }
