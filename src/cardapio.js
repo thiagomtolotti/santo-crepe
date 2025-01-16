@@ -16,7 +16,7 @@ const cardapios = `[
           }, {
               "name" :"Pizza",
               "ingredients" : "Queijo muçarela, tomates frescos, orégano e presunto"
-         }, ],
+         }],
          "doces": [{
               "name": "Morango e Chocolate",
               "ingredients": "Chocolate com morangos picados"
@@ -26,7 +26,7 @@ const cardapios = `[
          }, {
               "name": "Banana e Doce de leite",
               "ingredients": "Banana em rodelas e doce de leite cremoso"
-         }],
+		}],
          "link":"https://api.whatsapp.com/send?phone=554188596006&text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20o%20card%C3%A1pio%20Quartier%20de%20Paris.",
          "obs" : "Crepes servidos no cone de papelão"
     }, {
@@ -75,7 +75,7 @@ const cardapios = `[
          }, {
               "name" :"Light",
               "ingredients" : "Queijo muçarela, tomates frescos e rúcula"
-         },],
+         }],
          "doces": [{
               "name": "Sensação",
               "ingredients": "Morango e chocolate ao leite"
