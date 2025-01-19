@@ -1,6 +1,6 @@
 const cardapios = `[ 
     {
-         "name":"Quartier de Paris",
+         "name":"Crepe no cone",
          "salgados": [{
               "name" :"Frango",
               "ingredients" : "Queijo muçarela e frango desfiado"
@@ -27,7 +27,7 @@ const cardapios = `[
               "name": "Banana e Doce de leite",
               "ingredients": "Banana em rodelas e doce de leite cremoso"
 		}],
-         "link":"https://api.whatsapp.com/send?phone=554188596006&text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20o%20card%C3%A1pio%20Quartier%20de%20Paris.",
+         "link":"https://api.whatsapp.com/send?phone=554188596006&text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20o%20card%C3%A1pio%20Crepe%20no%20Cone.",
          "obs" : "Crepes servidos no cone de papelão"
     }, {
          "name":"Santo",
